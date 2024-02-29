@@ -34,6 +34,9 @@ class Storage {
 
   removeItem(itemToRemove) {
     const removeInd = this.#items.indexOf(itemToRemove);
+    if(removeInd < 0) {
+      return console.log(`${itemToRemove} not found`);
+    }
     this.#items.splice(removeInd, 1);
   }
 }
@@ -44,3 +47,4 @@ storage.addItem("Droid");
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 storage.removeItem("Prolonger");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+storage.removeItem("Pyoneer");
