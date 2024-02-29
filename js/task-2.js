@@ -48,3 +48,4 @@ console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator",
 storage.removeItem("Prolonger");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 storage.removeItem("Pyoneer");
+console.log(storage.getItems());
